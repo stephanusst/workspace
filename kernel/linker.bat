@@ -1,0 +1,1 @@
+c:\mingw\bin\ld -o basic.bin -Ttext 0x0 --oformat binary basic.o

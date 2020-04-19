@@ -1,0 +1,26 @@
+
+Question 1
+What do you expect will be printed now, when this org directive is added to this boot-
+sector program? For good marks, explain why this is so.
+
+Question 2
+What will be printed in what order by the code in Figure 3.6? And at what absolute
+memory address will the ASCII character 'C' be stored? You may find it useful to modify
+the code to confirm your expectation, but be sure to explain why it is this address.
+
+Question 3
+It's always useful to plan your conditional code in terms of a higher level language, then
+replace it with the assembly instructions. Have a go at converting this pseudo assembly
+code into full assembly code, using cmp and appropriate jump instructions. Test it with
+different values of bx. Fully comment your code, in your own words.
+
+
+Question 4
+Put together all of the ideas in this section to make a self-contained function for printing
+null-terminated strings, that can be used as follows:
+...
+
+Question 5 (Advanced)
+Complete the implementation of the print hex function. You may find the CPU instruc-
+tions and and shr to be useful, which you can find information about on the Internet.
+Make sure to fully explain your code with comments, in your own words.

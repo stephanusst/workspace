@@ -1,0 +1,21 @@
+--- Makefile.orig	2006-11-14 01:19:30.214928700 +0000
++++ Makefile	2006-11-14 01:19:56.636803700 +0000
+@@ -1,11 +1,15 @@
+ AS=as
+ LD=ld
++OBJCOPY=objcopy
+ 
+ all: bootsect
+ 
+-bootsect: bootsect.o
++bootsect: bootsect.out
++	@$(OBJCOPY) -O binary -j .text $< $@
++
++bootsect.out: bootsect.o
+ 	@echo "[LD] $@"
+-	@$(LD) -Ttext 0x0 -s --oformat binary -o $@ $<
++	@$(LD) -Ttext 0x0 -e _start -s -o $@ $<
+ 
+ bootsect.o: bootsect.S
+ 	@echo "[AS] $@"
+

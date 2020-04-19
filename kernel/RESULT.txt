@@ -1,0 +1,38 @@
+RESULT
+
+cygwin subsystem
+gcc
+kernel.o:     file format pe-x86-64
+
+nasm
+kernel_entry.o: elf64-x86-64
+
+
+
+
+===========================
+linux subsytem
+
+basic.o: file format pe-i386
+
+kernel_entry.o
+check nasm hf
+
+kernel.o 
+objdump -d kernel.o 
+kernel.o file format pe-i386
+
+
+You can't use Windows ld to link Linux programs.
+$ ld -V
+GNU ld (GNU Binutils) 2.23.2
+   Supported emulations:
+    i386pe
+
+This ld only supports i386pe; it will always output .exe files for Windows.
+
+You need a cross-ld that can link ELF files for Linux. I don't know how 
+to build a cross-binutils. You also need the crt files and libc for 
+Linux. You want clang to automatically call your cross-ld and pass the 
+crt files and libc.
+--George Koehler

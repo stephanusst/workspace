@@ -1,0 +1,1 @@
+ld -o basic.tmp basic.o

@@ -1,0 +1,1 @@
+objcopy -O binary basic.tmp basic.bin
